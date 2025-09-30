@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home | cosmos for dummies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        /* Using a custom font to match the image */
+        body {
+            font-family: 'Space Mono', monospace;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-300 min-h-screen flex flex-col items-center p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-2xl w-full flex-grow">
+        <header class="text-center pb-16 mt-32 mb-32 border-b border-gray-800">
+            <h1 class="text-4xl sm:text-5xl font-bold text-white tracking-wider">cosmos for dummies</h1>
+            <h3 class="text-xl sm:text-2xl font-semibold text-gray-400 pt-4">by <a href="about.html" class="underline text-white">Sejith Thiagarajan</a></h3>
+        </header>
+
+        <div class="relative pl-8" id="blog-list-container">
+            <div class="absolute left-3 top-2 bottom-2 w-0.5 bg-gray-600"></div>
+
+            <div id="loading-message" class="text-center text-gray-500 pt-8">Loading blog posts...</div>
+        </div>
+        <div id="pagination-controls" class="flex justify-center items-center space-x-2 my-10"></div>
+    </div>
+
+<footer class="w-full bg-black text-white py-16 mt-20 rounded-xl">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+
+            <a href="index.html"><h1 class="text-4xl font-bold text-white tracking-widest mb-10">cosmos for dummies</h1></a>
+
+            <div class="max-w-3xl mx-auto px-4">
+                <p class="text-lg text-gray-300 leading-relaxed mb-12">
+                    Hi, I'm Sejith, a student who's endlessly curious about the universe. I started cosmos for dummies to share astronomy in a way that's fun, simple, and actually worth reading, even if you've never cared about space before. This blog is my way of turning complex ideas into stories, questions, and connections that feel alive and relatable.
+                </p>
+            </div>
+
+            <h3 class="text-2xl text-white tracking-widest mb-5">my socials:</h3>
+
+            <div class="flex justify-center space-x-6 pt-4 pb-16 text-white">
+                <a href="https://www.instagram.com/sejith.t/" class="hover:underline transition-all duration-200" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@sejith-thiagarajan/featured" class="hover:underline transition-all duration-200" target="_blank">YouTube</a>
+                <a href="https://www.linkedin.com/in/sejith-thiagarajan/" class="hover:underline transition-all duration-200" target="_blank">LinkedIn</a>
+                <a href="https://linktr.ee/sejith_thiagarajan" class="hover:underline transition-all duration-200" target="_blank">Linktree</a>
+            </div>
+
+            <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                    this website is a personal project and is not affiliated with any organization.
+            </p>
+            <p class="text-xs text-gray-300 leading-relaxed mb-12">
+                    this website is created natively with moderate assistance from generative ai tools.
+            </p>
+
+            <p class="text-sm text-gray-500 pt-6 border-t border-gray-700 max-w-2xl mx-auto">
+                &copy; <span id="year"></span> sejith thiagarajan. all rights reserved.
+            </p>
+        </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="script.js"></script>
+<script>
+        // Script to dynamically set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+

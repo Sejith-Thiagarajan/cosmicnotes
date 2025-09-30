@@ -1,0 +1,125 @@
+:root {
+  --line-left: 80px;         /* x position of the vertical timeline line */
+  --dot-size: 14px;         /* timeline dot diameter */
+  --content-indent: 140px;  /* how far content is indented from the left edge */
+  --max-width: 900px;
+}
+
+/* Timeline Blog CSS: Black & White, Lines Only */
+:root {
+    --timeline-x: 70px;
+    --content-indent: 120px;
+    --max-width: 800px;
+    --timeline-color: #bbb;
+}
+
+html {
+    font-family: Space Mono;
+    background-color: black;
+    color: white;
+
+html {
+    font-family: 'Space Mono', monospace;
+    background: #000;
+    color: #fff;
+}
+}
+
+.header {
+    text-align: center;
+    margin: 10%;
+    border-width: 1px;
+
+.header {
+    text-align: center;
+    margin: 10% 0 3% 0;
+    border-bottom: 1px solid #222;
+    padding-bottom: 1.5rem;
+}
+    border-color: white;
+}
+
+
+h1.title {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Blog Timeline Section */
+.blog-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 40px 0 40px 0;
+    position: relative;
+    background: #000;
+}
+
+.blog-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: var(--timeline-x);
+    width: 2px;
+    height: 100%;
+    background: var(--timeline-color);
+    z-index: 1;
+}
+
+.blog-title {
+    font-size: 2rem;
+    margin-bottom: 48px;
+    margin-left: 50px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.blog-post {
+    position: relative;
+    margin-left: var(--content-indent);
+    margin-bottom: 56px;
+    padding: 0 0 0 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 2;
+}
+
+.blog-post::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * (var(--content-indent) - var(--timeline-x) + 2px));
+    top: 1.2em;
+    width: calc(var(--content-indent) - var(--timeline-x));
+    height: 2px;
+    background: var(--timeline-color);
+    z-index: 2;
+}
+
+.post-title {
+    font-size: 1.25rem;
+    margin: 0 0 8px 0;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    background: none;
+}
+
+.post-meta {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.post-content {
+    font-size: 1.08rem;
+    color: #fff;
+    line-height: 1.7;
+    background: none;
+}
+h1.title {
+    font-size: 40px;
+}
+
