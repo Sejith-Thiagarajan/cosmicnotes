@@ -1,1 +1,1 @@
-# cosmos-for-dummies
+# cosmic-notes
