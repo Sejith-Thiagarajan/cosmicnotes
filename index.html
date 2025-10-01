@@ -12,10 +12,41 @@
         /* Using a custom font to match the image */
         body {
             font-family: 'Space Mono', monospace;
+            margin: 0;
+            padding: 0;
+            height: 300vh
+        }
+        .fullscreen-bg {
+            /* 1. KEY: Stays locked to the viewport */
+            position: fixed; 
+            top: 0;
+            left: 0;
+            
+            /* 2. KEY: Covers the entire viewport */
+            width: 100%;
+            height: 100%;
+            
+            /* 3. Pushes the background behind content */
+            z-index: -1; 
+            
+            /* 4. REPLACE with your image file path or URL */
+            background-image: url('static/spacebg5.jpg'); 
+            
+            /* 5. Ensures the image covers the container */
+            background-size: cover; 
+            
+            /* 6. Centers the image */
+            background-position: center; 
+            
+            /* 7. Redundant but good practice for static background */
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
         }
     </style>
 </head>
 <body class="bg-black text-gray-300 min-h-screen flex flex-col items-center p-4 sm:p-6 md:p-8">
+
+    <div class="fullscreen-bg"></div>
 
     <div class="max-w-2xl w-full flex-grow">
         <header class="text-center pb-16 mt-32 mb-32 border-b border-gray-800">
